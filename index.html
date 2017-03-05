@@ -7,8 +7,8 @@
     <script src="https://code.angularjs.org/1.4.6/angular.min.js"></script>
 </head>
 <body ng-app="taskManager">
-    <h1>I like animals</h1>
     <div ng-controller="taskCtrl as ctrl">
+        <h1>I like animals</h1>
         <div ng-class="{'checked-box': ctrl.animalsAll.isCheckAll}">
             <label>
                 <input type="checkbox" name="ctrl.animalsAll.name" value="" ng-checked="ctrl.animalsAll.isCheckAll" ng-click="ctrl.checkedAll()">
