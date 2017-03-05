@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+    <script src="https://code.angularjs.org/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="taskManager">
+    <h1>I like animals</h1>
+    <div ng-controller="taskCtrl as ctrl">
+        <div ng-class="{'checked-box': ctrl.animalsAll.isCheckAll}">
+            <label>
+                <input type="checkbox" name="ctrl.animalsAll.name" value="" ng-checked="ctrl.animalsAll.isCheckAll" ng-click="ctrl.checkedAll()">
+                <span></span>
+                {{ctrl.animalsAll.name}}
+            </label>
+        </div>
+        <div ng-repeat="animal in ctrl.animals" ng-class="{'checked-box': animal.isCheck}">
+            <label>
+                <input type="checkbox" name="animal.name" id="animal.id" value="" ng-checked="animal.isCheck" ng-click="ctrl.checked(animal)">
+                <span></span>
+                {{animal.name}}
+            </label>
+        </div>
+    </div>
+ <script src="scripts/app.js"></script>
+ <script src="scripts/task.js"></script>   
+</body>
+</html>

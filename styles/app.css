@@ -1,0 +1,20 @@
+label input {
+  display: none;
+}
+label span {
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    background: url('../images/checkbox.png') center center;
+    background-size: cover;
+    background-color: #e3dede;
+    opacity: 0.5;
+}
+.checked-box label span {
+    background-color: transparent;
+    opacity: 1;
+}
+
+.fullState.checked-box label span {
+    background-color: #434008;
+}
